@@ -3,7 +3,6 @@ package mubei.ah.func;
 import mubei.ah.mapreduce.KeyValue;
 
 import java.util.List;
-import java.util.function.Predicate;
 
 /**
  * @author 帅小伙呀
@@ -11,6 +10,6 @@ import java.util.function.Predicate;
  */
 public interface MapFunc {
 
-    List<KeyValue> mapF(String cnt, Predicate<Character> predicate);
+    List<KeyValue> mapF(String cnt);
 
 }
