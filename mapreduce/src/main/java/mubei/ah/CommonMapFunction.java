@@ -16,15 +16,6 @@ import java.util.stream.Collectors;
  * @date 2023/9/3 21:09
  */
 public class CommonMapFunction {
-    // map 划分规则
-    Predicate<Character> predicate;
-
-    public CommonMapFunction predicate(Predicate<Character> predicate) {
-        this.predicate = predicate;
-        return this;
-    }
-
-
     /**
      * map function
      *
