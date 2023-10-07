@@ -32,11 +32,13 @@ public class WordCountTest {
 
         Map<String, String> retMap = wordCount.mapFunc.mapF(cnt)
                 .stream()
+                // 将key value - key：v1、v2、v3
                 .collect(Collectors.groupingBy(
                         KeyValue::getKey,
                         Collectors.mapping(KeyValue::getValue, Collectors.toList())
                 ))
                 .entrySet().stream()
+                // 聚合 size()
                 .collect(Collectors.toMap(
                         Map.Entry::getKey,
                         entry -> wordCount.reduceFunc.reduceF(entry.getKey(), entry.getValue())
